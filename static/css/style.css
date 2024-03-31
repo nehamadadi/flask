@@ -1,0 +1,14 @@
+#heading {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 200px; 
+  background-image: url('/static/cord_banner.jpeg');
+  background-size: cover; 
+  background-position: center; 
+  color: black; 
+  font-size: 2em; 
+}
+#h2 {
+text-align: center;
+}

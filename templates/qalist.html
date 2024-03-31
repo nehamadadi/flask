@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/qalist.css') }}">
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div id = "heading">
+    <h1> CORD-19 Question Answering System</h1>
+    </div>
+    {% for question, answer in qa_pairs %}
+        <div class="qa-pair">
+            <h2>Question: {{ question }}</h2>
+            <p>Answer: {{ answer }}</p>
+        </div>
+    {% endfor %}
+  </body>
+</html>

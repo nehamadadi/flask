@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>navbar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+</head>
+<body>
+    <div id="navbar">
+        <a href="{{ url_for('homepage') }}">Home</a>
+        <a href="{{ url_for('qalist') }}">Q&A List</a>
+        <a href="{{ url_for('interactive') }}">Interactive</a>
+    </div>
+</body>
+</html>
