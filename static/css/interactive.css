@@ -1,63 +1,107 @@
-
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Updated to Open Sans for a modern look */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #DDE6ED; /* Lightest blue from the color scheme */
+    color: #27374D; /* Dark blue from the color scheme for text */
 }
 
 .navbar {
-    background-color: #007bff;
+    background-color: #27374D; /* Dark blue for the navbar for contrast */
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    display: flex; /* Flexbox for better alignment of nav items */
+    justify-content: space-between; /* Space out nav items */
+    align-items: center; /* Vertically align nav items */
+}
+
+.navbar a {
+    color: inherit; /* Keep the white color for links */
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    background-color: #526D82; /* Medium blue for hover */
 }
 
 h1 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-top: 50px;
+    font-size: 2.5em; /* Slightly larger font size */
+    color: #526D82; /* Medium blue for headings */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 form {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #fff; /* Keeping form background white for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(39, 55, 77, 0.2); /* Shadow with a hint of the dark blue */
 }
 
-input[type=text] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 32px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+input[type=text], button {
+    width: calc(100% - 40px); /* Adjust width for padding */
+    padding: 15px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border: 2px solid #9DB2BF; /* Light blue for the border */
+    border-radius: 5px;
+    color: #27374D; /* Text color inside inputs */
 }
 
 button {
-    background-color: #28a745;
-    color: white;
-    padding: 12px 20px;
+    background-color: #526D82; /* Medium blue for buttons */
+    color: #DDE6ED; /* Lightest blue for button text */
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
 }
 
-button:hover {
-    background-color: #218838;
+button:hover, button:focus {
+    background-color: #27374D; /* Darker blue on hover for feedback */
 }
 
 h2 {
-    font-size: 20px;
-    color: #333;
+    font-size: 1.75em;
+    color: #526D82;
+    margin-top: 1em;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+/* Assuming .output is the class for showing form output */
+.output {
+    background-color: #fff; /* White background for clear visibility */
+    border: 1px solid #9DB2BF; /* Light blue border */
+    padding: 15px;
+    margin-top: 15px; /* Space it out from the rest of the content */
+    border-radius: 5px; /* Rounded corners */
+    color: #27374D; /* Dark blue text color for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px; /* Reduced padding on smaller screens */
+        flex-direction: column; /* Stack nav items on smaller screens */
+    }
+
+    .navbar a {
+        padding: 8px 10px; /* Smaller padding for nav links */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    form, .output {
+        width: 90%; /* Full width on smaller screens */
+        margin: 1em auto; /* Adjusted margin */
+        padding: 1em; /* Less padding */
+    }
 }
