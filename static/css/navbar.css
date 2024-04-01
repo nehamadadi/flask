@@ -1,31 +1,31 @@
 #navbar {
     overflow: hidden;
-    background-color: #27374D; /* Dark Blue */
+    background-color: #27374D; 
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #navbar a {
     float: left;
     display: block;
-    color: #DDE6ED; /* Light Blue */
+    color: #DDE6ED; 
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s; 
 }
 
 #navbar a:hover {
-    background-color: #9DB2BF; /* Medium Blue */
-    color: #27374D; /* Dark Blue, for contrast against hover background */
+    background-color: #9DB2BF; 
+    color: #27374D; 
 }
 
-/* Add a class for the current/active page link */
+
 #navbar a.active {
-    background-color: #526D82; /* Deeper Blue */
+    background-color: #526D82; 
     color: white;
 }
 
-/* Optional: Responsive hamburger menu icon */
+
 #navbar .icon {
     display: none;
 }
@@ -35,7 +35,7 @@
     #navbar a.icon {
         float: right;
         display: block;
-        color: #DDE6ED; /* Light Blue */
+        color: #DDE6ED; 
     }
     #navbar.responsive {position: relative;}
     #navbar.responsive .icon {
