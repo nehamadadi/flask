@@ -5,7 +5,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/interactive.css') }}">
 </head>
 <body>
-  {% include 'navbar.html' %}
-    Interactive 
+    {% include 'navbar.html' %}
+    <h1>Ask a Question</h1>
+    <form action="{{ url_for('interactive') }}" method="post">
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        {% if answer %}
+            <h2>Answer:</h2>
+            <p>{{ answer }}</p>
+        {% endif %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
 </body>
 </html>
